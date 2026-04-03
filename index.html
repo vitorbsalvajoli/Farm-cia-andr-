@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmácia do André</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #00796B 0%, #004D40 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .container {
+            background: white;
+            border-radius: 20px;
+            padding: 50px;
+            max-width: 800px;
+            width: 100%;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            text-align: center;
+        }
+        h1 {
+            color: #00796B;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            color: #666;
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+        }
+        .links {
+            display: grid;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        .link-card {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 25px;
+            background: #f5f5f5;
+            border-radius: 15px;
+            text-decoration: none;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+        .link-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-color: #00796B;
+        }
+        .link-icon {
+            font-size: 2.5rem;
+            min-width: 60px;
+        }
+        .link-info {
+            text-align: left;
+        }
+        .link-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 5px;
+        }
+        .link-desc {
+            font-size: 0.9rem;
+            color: #666;
+        }
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            color: #999;
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🏥 Farmácia do André</h1>
+        <p class="subtitle">Sua saúde em primeiro lugar</p>
+        
+        <div class="links">
+            <a href="site-cliente/" class="link-card">
+                <span class="link-icon">🛒</span>
+                <div class="link-info">
+                    <div class="link-title">Site do Cliente</div>
+                    <div class="link-desc">Faça seus pedidos online</div>
+                </div>
+            </a>
+            
+            <a href="site-farmacia/" class="link-card">
+                <span class="link-icon">📋</span>
+                <div class="link-info">
+                    <div class="link-title">Área da Farmácia</div>
+                    <div class="link-desc">Gerencie pedidos (acesso restrito)</div>
+                </div>
+            </a>
+            
+            <a href="site-admin/" class="link-card">
+                <span class="link-icon">📊</span>
+                <div class="link-info">
+                    <div class="link-title">Painel Administrativo</div>
+                    <div class="link-desc">Dashboard completo (acesso restrito)</div>
+                </div>
+            </a>
+        </div>
+        
+        <div class="footer">
+            <p>📍 Av. Nove de Julho, 1381 - José Bonifácio - SP</p>
+            <p>📞 (17) 3245-2992 | 📸 @farmaciadoandre</p>
+        </div>
+    </div>
+</body>
+</html>
