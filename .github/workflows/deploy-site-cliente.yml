@@ -1,0 +1,39 @@
+name: Deploy Site do Cliente
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'site-cliente/**'
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages-cliente"
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages-cliente
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: './site-cliente'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
